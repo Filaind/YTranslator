@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffcc00</color>
+    <color name="colorPrimaryDark">#e6b800</color>
+    <color name="colorAccent">#ffbf00</color>
+
+    <color name="blueWords">#90CAF9</color>
+    <color name="redWords">#E57373</color>
+
+    <color name="dict_noFavorite">#9E9E9E</color>
+    <color name="dict_inFavorite">#ffbf00</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="outline_gray">#E0E0E0</color>
+</resources>

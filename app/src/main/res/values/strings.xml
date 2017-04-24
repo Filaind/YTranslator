@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">YaTranslator</string>
+    <string name="translatedByYandex">&lt;a href="https://translate.yandex.ru/">«Переведено сервисом «Яндекс.Переводчик»&lt;/a></string>
+    <string name="enterText">Введите текст</string>
+    <string name="failedTranslateText">Не удалось перевести текст.</string>
+    <string name="checkInternet">Проверьте соединение с сетью.</string>
+    <string name="errorCode">Код ошибки:</string>
+    <string name="clearHistory">Очистить историю</string>
+    <string name="clearHistoryMsg">Вы действительно хотите очистить историю и избранные переводы?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="settings">Настройки</string>
+    <string name="aboutApp">О приложении</string>
+    <string name="history">История</string>
+    <string name="favorite">Избранное</string>
+    <string name="version">Версия: 1.0</string>
+    <string name="aboutAppText">Приложение сделано в качестве
+        тестового задания для «Yandex Мобилизация»
+    </string>
+    <string name="usingTec">
+        Истользуются технологии:\n
+        «API Яндекс.Переводчик»\n
+        «API Яндекс.Словарь»\n
+    </string>
+    <string name="contactWithDeveloper">Связь с разработчиком</string>
+    <string name="offlineTranslate">Офлайн переводчик</string>
+    <string name="showDictionary">Показывать словарь</string>
+    <string name="other">Прочее</string>
+    <string name="mainSettings">Основные настройки</string>
+    <string name="developer">Разработчик: Станислав Шемягин</string>
+    <string name="contacts">Контакты</string>
+    <string name="searchInHistory">Найти в истории</string>
+    <string name="searchInFavorite">Найти в избранном</string>
+    <string name="noTranslateHistory">Нет истории переводов</string>
+    <string name="noFavorites">Нет избранных переводов</string>
+    <string name="email">Stanislav.Shemyagin@gmail.com</string>
+    <string name="vk">vk.com/shemaga</string>
+
+    <string name="desc_developer">Разработчик</string>
+    <string name="desc_no_elements">Нет элементов</string>
+    <string name="desc_btn_favorite">Кнопка избранное</string>
+    <string name="desc_clearHistory">Очистить историю</string>
+    <string name="desc_switchLang">Смена языков</string>
+    <string name="desc_clearText">Очистить текст</string>
+    <string name="desc_open_to_fullscreen">Открыть на весь экран</string>
+</resources>

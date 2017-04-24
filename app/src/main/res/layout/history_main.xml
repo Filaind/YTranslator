@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <android.support.design.widget.TabLayout
+                android:id="@+id/historyTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/clearHistory"
+                android:layout_toStartOf="@+id/clearHistory"
+                />
+            <ImageButton
+                android:contentDescription="@string/desc_clearHistory"
+                android:id="@+id/clearHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_black_28dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/appbar_text_margin"
+                android:layout_marginEnd="@dimen/appbar_text_margin"
+                android:alpha="0.6"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/searchInHistory"
+        >
+    </SearchView>
+    <LinearLayout
+        android:id="@+id/noTranslateHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:contentDescription="@string/desc_no_elements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_translate_history_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/noTranslateHistoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noTranslateHistory"
+            android:gravity="center"
+            android:textSize="24sp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/searchList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        >
+    </ListView>
+
+</LinearLayout>

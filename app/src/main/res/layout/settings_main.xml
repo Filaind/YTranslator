@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/settings"
+            android:gravity="center"
+            android:textSize="@dimen/appbar_text_size"
+            android:layout_marginLeft="@dimen/appbar_text_margin"
+            android:layout_marginStart="@dimen/appbar_text_margin"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/settingsContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+
+</LinearLayout>
