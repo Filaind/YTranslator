@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".activities.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,16 +20,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="Yandex Translator"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AboutActivity"
+            android:name=".activities.AboutActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ContactActivity"
+            android:name=".activities.ContactActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TextReaderActivity"
+        <activity android:name=".activities.TextReaderActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 </manifest>

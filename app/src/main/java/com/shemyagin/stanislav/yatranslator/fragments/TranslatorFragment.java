@@ -1,10 +1,9 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.fragments;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -30,6 +29,13 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.shemyagin.stanislav.yatranslator.DBHelper;
+import com.shemyagin.stanislav.yatranslator.Dictionary;
+import com.shemyagin.stanislav.yatranslator.R;
+import com.shemyagin.stanislav.yatranslator.models.TranslateResultModel;
+import com.shemyagin.stanislav.yatranslator.Translator;
+import com.shemyagin.stanislav.yatranslator.activities.MainActivity;
+import com.shemyagin.stanislav.yatranslator.activities.TextReaderActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -133,7 +139,7 @@ public class TranslatorFragment extends Fragment {
         /** Офлайн перевод */
         if(offlineTranslate) {
             /** Проверяем в БД перевод такого текста и языка */
-            ArrayList<TranslateResult> dbTranslate = dataBaseHelper.getTranslate(text, translateLang);
+            ArrayList<TranslateResultModel> dbTranslate = dataBaseHelper.getTranslate(text, translateLang);
 
             /** Если пеервод встечается, то выводим и делаем запрос на словарь
              * Словарь в БД не хранится
@@ -163,7 +169,7 @@ public class TranslatorFragment extends Fragment {
 
 
                     /** Добавляю в БД результат пеервода */
-                    dataBaseHelper.insert(new TranslateResult(origText,translatedText,translateLang,false));
+                    dataBaseHelper.insert(new TranslateResultModel(origText,translatedText,translateLang,false));
 
                     /** Обновляю историю переводов */
                     ((MainActivity)getActivity()).getHistoryFragment().updateHistoryList();

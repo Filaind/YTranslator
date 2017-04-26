@@ -1,13 +1,13 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.models;
 
-public class TranslateResult {
+public class TranslateResultModel {
     public final String from;
     public final String to;
     public final String lang;
     public boolean favorite;
     public final int id;
 
-    public  TranslateResult(String from, String to,String lang, boolean favorite)
+    public TranslateResultModel(String from, String to, String lang, boolean favorite)
     {
         this.from = from;
         this.to = to;
@@ -16,7 +16,7 @@ public class TranslateResult {
         this.id = 0;
     }
 
-    public  TranslateResult(String from, String to,String lang, boolean favorite, int id)
+    public TranslateResultModel(String from, String to, String lang, boolean favorite, int id)
     {
         this.from = from;
         this.to = to;

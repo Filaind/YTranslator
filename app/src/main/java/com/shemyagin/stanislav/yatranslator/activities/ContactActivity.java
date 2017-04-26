@@ -1,7 +1,9 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.shemyagin.stanislav.yatranslator.R;
 
 public class ContactActivity extends AppCompatActivity {
 

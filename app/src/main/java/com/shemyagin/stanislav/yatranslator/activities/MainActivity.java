@@ -1,10 +1,8 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,13 +10,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
+
+import com.shemyagin.stanislav.yatranslator.DBHelper;
+import com.shemyagin.stanislav.yatranslator.Dictionary;
+import com.shemyagin.stanislav.yatranslator.fragments.HistoryFragment;
+import com.shemyagin.stanislav.yatranslator.R;
+import com.shemyagin.stanislav.yatranslator.fragments.SettingsFragment;
+import com.shemyagin.stanislav.yatranslator.Translator;
+import com.shemyagin.stanislav.yatranslator.fragments.TranslatorFragment;
 
 
 public class MainActivity extends AppCompatActivity {

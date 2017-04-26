@@ -1,8 +1,10 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.shemyagin.stanislav.yatranslator.activities.MainActivity;
 
 /**
  * Created by Findz on 22.04.2017.

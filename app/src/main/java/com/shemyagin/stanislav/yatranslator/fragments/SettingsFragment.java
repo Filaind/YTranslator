@@ -1,17 +1,17 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import com.shemyagin.stanislav.yatranslator.R;
+import com.shemyagin.stanislav.yatranslator.activities.AboutActivity;
+import com.shemyagin.stanislav.yatranslator.activities.ContactActivity;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 

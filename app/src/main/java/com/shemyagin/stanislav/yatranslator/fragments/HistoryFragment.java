@@ -1,4 +1,4 @@
-package com.shemyagin.stanislav.yatranslator;
+package com.shemyagin.stanislav.yatranslator.fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,13 +19,18 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.shemyagin.stanislav.yatranslator.DBHelper;
+import com.shemyagin.stanislav.yatranslator.R;
+import com.shemyagin.stanislav.yatranslator.models.TranslateResultModel;
+import com.shemyagin.stanislav.yatranslator.activities.MainActivity;
+
 import java.util.ArrayList;
 
 public class HistoryFragment extends Fragment {
 
     private HistoryArrayAdapter adapter;
     private SearchView searchView;
-    private ArrayList<TranslateResult> historyResults = new ArrayList<>();
+    private ArrayList<TranslateResultModel> historyResults = new ArrayList<>();
 
     private TabLayout mTabLayout;
     private ImageButton clearHistory;
@@ -41,6 +46,8 @@ public class HistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.history_main, container, false);
+
+
         dbHelper = ((MainActivity)getActivity()).getDbHelper();
 
         ((MainActivity)getActivity()).historyFragment = this;
@@ -167,7 +174,7 @@ public class HistoryFragment extends Fragment {
         }
     }
 
-    public class HistoryArrayAdapter extends ArrayAdapter<TranslateResult>
+    public class HistoryArrayAdapter extends ArrayAdapter<TranslateResultModel>
     {
         public HistoryArrayAdapter(Context context) {
             super(context, R.layout.search_item, historyResults);
@@ -175,7 +182,7 @@ public class HistoryFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            final TranslateResult tResult = getItem(position);
+            final TranslateResultModel tResult = getItem(position);
 
             if (convertView == null) {
                 convertView = LayoutInflater.from(getContext())

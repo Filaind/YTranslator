@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.shemyagin.stanislav.yatranslator.models.TranslateResultModel;
+
 import java.util.ArrayList;
 
 
@@ -56,9 +58,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     /**
      * Метод помещающий результат перевода в БД
-     * @param result Результат перевода в виде TranslateResult
+     * @param result Результат перевода в виде TranslateResultModel
      * */
-    public  void insert(TranslateResult result)
+    public  void insert(TranslateResultModel result)
     {
         SQLiteDatabase dataBase = getWritableDatabase(); /** Открывает экземпляр базы данных */
 
@@ -129,10 +131,10 @@ public class DBHelper extends SQLiteOpenHelper {
      * @param text Текст перевода. Может отсутствовать,но тогда будет возвращены все значения
      * @param favorite В избранном
      * */
-    public ArrayList<TranslateResult> getHistory(String text,boolean favorite)
+    public ArrayList<TranslateResultModel> getHistory(String text, boolean favorite)
     {
 
-        ArrayList<TranslateResult> results = new ArrayList<>();
+        ArrayList<TranslateResultModel> results = new ArrayList<>();
         SQLiteDatabase dataBase = getReadableDatabase();
         Cursor c = null;
         String filter = '%' + text + '%';
@@ -158,7 +160,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 int idLang = c.getColumnIndex(LANG);
                 int idFavorite = c.getColumnIndex(IS_FAVORITE);
                 int idID = c.getColumnIndex(KEY_ID);
-                results.add(new TranslateResult(c.getString(idFrom),c.getString(idTo),
+                results.add(new TranslateResultModel(c.getString(idFrom),c.getString(idTo),
                         c.getString(idLang),(c.getInt(idFavorite) == 1),c.getInt(idID)));
             }
             while (c.moveToPrevious());
@@ -172,9 +174,9 @@ public class DBHelper extends SQLiteOpenHelper {
      * @param text Текст перевода.
      * @param lang Язык перевода
      * */
-    public ArrayList<TranslateResult> getTranslate(String text,String lang)
+    public ArrayList<TranslateResultModel> getTranslate(String text, String lang)
     {
-        ArrayList<TranslateResult> results = new ArrayList<>();
+        ArrayList<TranslateResultModel> results = new ArrayList<>();
         SQLiteDatabase dataBase = getReadableDatabase(); //Открывает экземпляр базы данных
         Cursor c = null;
 
@@ -188,7 +190,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 int idLang = c.getColumnIndex(LANG);
                 int idFavorite = c.getColumnIndex(IS_FAVORITE);
                 int idID = c.getColumnIndex(KEY_ID);
-                results.add(new TranslateResult(c.getString(idFrom),c.getString(idTo),
+                results.add(new TranslateResultModel(c.getString(idFrom),c.getString(idTo),
                         c.getString(idLang),(c.getInt(idFavorite) == 1),c.getInt(idID)));
             }
             while (c.moveToNext());
